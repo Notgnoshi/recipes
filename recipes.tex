@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\input{recipes.sty}
+
+\title{Recipes}
+\author{Austin Gill}
+
+\begin{document}
+    \maketitle
+    \begin{abstract}
+        Various recipes I like.
+    \end{abstract}
+    \thispagestyle{empty}
+
+    \newpage
+    \tableofcontents
+
+    \newpage
+    \section{Main Courses}\label{sec:main-courses}
+        \input{recipes/main-courses/main-courses.tex}
+
+    \section{Deserts}\label{sec:deserts}
+        \input{recipes/deserts/deserts.tex}
+
+    \section{Drinks}\label{sec:drinks}
+        \input{recipes/drinks/drinks.tex}
+
+    \newpage
+    \appendix\appendixpage{}\addappheadtotoc{}
+    \section{Supplemental Content}\label{sec:supplemental-content}
+        \todo{Provide supplemental content}
+
+    \newpage
+    \bibliographystyle{ieeetr}
+    \bibliography{project}
+\end{document}

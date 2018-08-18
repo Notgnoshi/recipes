@@ -1,0 +1,58 @@
+% !TEX root = recipes.tex
+
+\usepackage[titletoc]{appendix}
+\usepackage{array}
+\usepackage[english]{babel}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{cuisine}
+\usepackage{eqparbox}
+\usepackage{float}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{parskip}
+\usepackage{scalerel}
+\usepackage{skull}
+\usepackage{subcaption}
+\usepackage{titling}
+\usepackage{textcomp}
+\usepackage{titlesec}
+\usepackage{textcomp}
+\usepackage[nottoc]{tocbibind}
+\usepackage[textsize=small]{todonotes}
+\usepackage[normalem]{ulem}
+
+% Sets the width of the margin TODO notes
+\setlength{\marginparwidth}{0.84in}
+\reversemarginpar{}
+
+% Make \paragraph{}s end with newlines and no indents
+\titleformat{\paragraph}
+    {\normalfont\bfseries}
+    {}
+    {0pt}
+    {}
+% Make \paragraph{}s not have a space between the title and the text
+\titlespacing*{\paragraph}{0pt}{1ex}{-\parskip}
+
+% An inline TODO command. Doesn't play nicely with \todotableofcontents
+\newcommand\todoinline[2][]{\todo[inline, caption={TODO}, #1]{
+\begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+
+% Draw clouds around things. Useful in mathematical proofs.
+\newcommand{\cloud}[4][\dots]{
+    \raisebox{-0.4\height}{
+        \begin{tikzpicture}
+            \node [cloud,
+                   draw,
+                   cloud puffs=#2,
+                   cloud ignores aspect,
+                   minimum height=#3,
+                   minimum width=#4] {#1};
+        \end{tikzpicture}
+    }
+}
