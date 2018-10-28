@@ -9,15 +9,22 @@
     \maketitle
     \tableofcontents
 
+
+    % Don't use \subsection because the recipe title is already a subsection.
     \newpage
-    \section{Main Courses}\label{sec:main-courses}
-        \input{recipes/main-courses/main-courses.tex}
+    \section{Pie}
+        \input{recipes/main-courses/pies.tex}
 
     \newpage
-    \section{Deserts}\label{sec:deserts}
-        \input{recipes/deserts/deserts.tex}
+    \section{Bread}
+        \input{recipes/main-courses/bread.tex}
 
     \newpage
-    \section{Drinks}\label{sec:drinks}
-        \input{recipes/drinks/drinks.tex}
+    \section{Pasta}
+        \input{recipes/main-courses/pasta.tex}
+
+    \newpage
+    \section{Cassaroles}
+        \input{recipes/main-courses/cassaroles.tex}
+
 \end{document}
